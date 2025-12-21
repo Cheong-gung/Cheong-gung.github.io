@@ -1,0 +1,45 @@
+body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5; /* 요청하신 줄간격 150% */
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #D4AF37; /* 황금색 포인트 */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h1 { font-weight: 300; letter-spacing: 2px; }
+
+.category {
+    color: #D4AF37; /* 카테고리 황금색 */
+    font-size: 1.2rem;
+    border-left: 4px solid #D4AF37;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+ul { list-style: none; padding: 0; }
+
+li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    color: #888;
+}
+
+.lang-switch a.active {
+    color: #000;
+    font-weight: bold;
+}
