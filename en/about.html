@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheong-gung - Chef's History</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .timeline {
+            max-width: 600px;
+            margin: 40px auto;
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: var(--gold-color);
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--gold-color);
+            border: 2px solid white;
+        }
+        .year {
+            font-weight: 700;
+            color: var(--gold-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        .experience {
+            font-size: 1.05rem;
+            color: var(--text-black);
+        }
+        .intro-text {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CHEONG GUNG</h1>
+        <div class="lang-switch">
+            <a href="index.html">MENU</a> | 
+            <a href="about.html" class="active">CHEF</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro-text">
+            <strong>40 years of culinary mastery by our Owner-Chef.</strong><br>
+            A legacy of authentic flavors that began in Myeong-dong, Seoul.
+        </div>
+
+        <section class="timeline">
+            <div class="timeline-item">
+                <span class="year">1985 - 1987</span>
+                <p class="experience">Worked at major Chinese restaurants in Myeong-dong, Seoul (Yeon-gyeong-gung, Buk-gyeong, etc.)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1988</span>
+                <p class="experience">Worked at major restaurants in Chuncheon, Gangwon (Mallihyang, Palson, etc.)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1997</span>
+                <p class="experience">Opened and operated 'Cheong-gung' in Iksan, Jeonbuk</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2007 - 2021</span>
+                <p class="experience">Operated 'Cheong-gung' in Chuncheon, Gangwon</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2025 - Present</span>
+                <p class="experience">Reopened and operating 'Cheong-gung' in Chuncheon, Gangwon</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 CHEONG GUNG. ALL RIGHTS RESERVED.
+    </footer>
+</body>
+</html>
