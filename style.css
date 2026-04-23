@@ -1,6 +1,6 @@
-/* 기본 설정 */
+/* 기본 변수 및 초기화 */
 :root {
-    --gold-color: #D4AF37; /* 황금색 */
+    --gold-color: #D4AF37;
     --text-black: #1a1a1a;
     --bg-white: #ffffff;
     --border-light: #eeeeee;
@@ -12,22 +12,22 @@ body {
     font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.5; /* 줄간격 150% */
+    line-height: 1.5; /* 줄간격 150% 반영 */
     -webkit-font-smoothing: antialiased;
 }
 
-/* 헤더 및 언어 선택 */
+/* 헤더: 화면 너비에 맞게 유동적으로 조절 */
 header {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
     border-bottom: 5px solid var(--gold-color);
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    letter-spacing: 4px;
+    margin: 0 0 15px 0;
     text-transform: uppercase;
 }
 
@@ -39,7 +39,8 @@ h1 {
 .lang-switch a {
     text-decoration: none;
     color: #888;
-    padding: 5px 10px;
+    padding: 5px 12px;
+    transition: color 0.3s;
 }
 
 .lang-switch a.active {
@@ -48,27 +49,29 @@ h1 {
     border-bottom: 2px solid var(--gold-color);
 }
 
-/* 메뉴 리스트 */
+/* 메인 컨테이너: 좌우 너비를 늘리고 반응형으로 설정 */
 main {
-    max-width: 600px;
+    max-width: 900px; /* 기존 600px에서 900px로 대폭 확장 */
+    width: 92%;       /* 모바일에서 좌우 여백 확보 */
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 0;
 }
 
 section {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 h2 {
-    color: var(--gold-color); /* 카테고리 황금색 */
-    font-size: 1.3rem;
+    color: var(--gold-color);
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-bottom: 1px solid var(--gold-color);
     display: inline-block;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
+/* 메뉴 리스트: 글자가 길어도 가격이 밀리지 않도록 설정 */
 ul {
     list-style: none;
     padding: 0;
@@ -77,32 +80,65 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    padding: 12px 0;
+    align-items: flex-start; /* 글자가 길어지면 위쪽 정렬 */
+    padding: 15px 0;
     border-bottom: 1px solid var(--border-light);
 }
 
-.menu-name {
-    font-size: 1.05rem;
-    font-weight: 400;
+.menu-item-wrapper {
+    flex: 1; /* 이름 영역이 가능한 넓게 차지 */
+    padding-right: 20px; /* 가격과의 간격 확보 */
 }
 
-.price {
-    font-size: 1rem;
+.menu-name {
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
-.sub-item {
-    padding-left: 15px;
-    font-size: 0.95rem;
-    color: #444;
+.price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    white-space: nowrap; /* 가격은 절대 줄바꿈되지 않음 */
+    color: var(--text-black);
 }
 
-/* 하단 정보 */
+/* 상세 설명 (세트 메뉴 등) */
+.set-menu-desc {
+    display: block;
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.reservation-note {
+    font-size: 0.9rem;
+    color: var(--gold-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* -----------------------------------------
+   반응형 미디어 쿼리 (Adaptive Design)
+   ----------------------------------------- */
+
+/* 태블릿 이상 (768px 이상) */
+@media (min-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    .menu-name, .price { font-size: 1.2rem; }
+}
+
+/* 큰 화면 (1024px 이상) */
+@media (min-width: 1024px) {
+    main { max-width: 1000px; } /* 데스크탑에서는 더 시원하게 */
+}
+
+/* 푸터 */
 footer {
     text-align: center;
-    padding: 40px 20px;
-    font-size: 0.8rem;
-    color: #999;
+    padding: 60px 20px;
+    font-size: 0.85rem;
+    color: #bbb;
     letter-spacing: 1px;
 }
